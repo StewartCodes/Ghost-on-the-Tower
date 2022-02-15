@@ -26,7 +26,7 @@ function setup() {
   ghost = createSprite(300, 400);
   ghost.addImage("ghost",ghostImg);
   ghost.scale = 0.35
-  ghost.debug = true 
+  ghost.debug = false 
   ghost.setCollider("rectangle", -10, 25, 175, 250);
 
 
@@ -97,7 +97,7 @@ function spawnDoor(){
   door.lifetime = (2000)
   ghost.depth = (door.depth + 1)
   door.setCollider("rectangle", 0, 60, 100, 15);
-  door.debug = true
+  door.debug = false;
   door.addImage("door", doorImg)
   doorsGroup.add (door)
 }
@@ -110,6 +110,6 @@ function spawnClimber(){
   ghost.depth = (climber.depth + 1)
   climber.setCollider("rectangle", 0, 5, 100, 7.5);
   climber.addImage("climber", climberImg)
-  climber.debug = true;
+  climber.debug = false;
   climbersGroup.add (climber)
 }
